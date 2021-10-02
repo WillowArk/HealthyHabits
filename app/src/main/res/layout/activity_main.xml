@@ -60,4 +60,44 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton9"
         app:srcCompat="@drawable/home_icon" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="103dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="100dp"
+        android:text="28"
+        android:textSize="90sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:text="Current Discount:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="25dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="40dp"
+        android:text="%"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
