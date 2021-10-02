@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="goToFitness"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:adjustViewBounds="true"
+        android:onClick="goToOptions"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton10"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#8B8B8B"
+        android:onClick="goToFitness"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:adjustViewBounds="true"
+        android:onClick="goToFood"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton8"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:adjustViewBounds="true"
+        android:onClick="goToSleep"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton9"
+        app:srcCompat="@drawable/home_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
