@@ -4,18 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.app.Activity;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class FoodTab extends AppCompatActivity {
 
-    public void takePicture(View view)
-    {
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +30,17 @@ public class FoodTab extends AppCompatActivity {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         } catch (ActivityNotFoundException e) {
             // display error state to the user
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            ImageView imageView = (ImageView) findViewById(R.id.imageView1);
+            imageView.setImageBitmap(imageBitmap);
         }
     }
 
