@@ -4,11 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/willc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_display_message.xml" value="0.264" />
+        <entry key="..\:/Users/willc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_fitness_tab.xml" value="0.1" />
+        <entry key="..\:/Users/willc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_food_tab.xml" value="0.16" />
         <entry key="..\:/Users/willc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_main.xml" value="0.190625" />
         <entry key="..\:/Users/willc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_options_tab.xml" value="0.1" />
         <entry key="..\:/Users/willc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_sleep_tab.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_fitness_tab.xml" value="0.45" />
-        <entry key="app/src/main/res/layout/activity_sleep_tab.xml" value="0.5978705978705978" />
       </map>
     </option>
   </component>
