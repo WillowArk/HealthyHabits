@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     @Override
     public void onSensorChanged(SensorEvent eve) {
-        System.out.println(eve.values[1]);
+        //System.out.println(eve.values[1]);
         if(eve.values[1] > 1.5 && up)
         {
             up = false;

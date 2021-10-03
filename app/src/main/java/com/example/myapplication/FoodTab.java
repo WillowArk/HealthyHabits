@@ -51,6 +51,7 @@ public class FoodTab extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_tab);
 
+        loadImageFromStorage("/data/user/0/com.example.myapplication/app_imageDir");
     }
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -74,7 +75,7 @@ public class FoodTab extends AppCompatActivity {
             imageView.setImageBitmap(imageBitmap);
 
             String p = saveToInternalStorage(imageBitmap);
-            loadImageFromStorage(p);
+            //loadImageFromStorage(p);
         }
     }
 
