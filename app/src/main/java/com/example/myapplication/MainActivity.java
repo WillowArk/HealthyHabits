@@ -18,27 +18,28 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
-    public int steps = 0;
+    public int steps;
     public TextView tv_steps;
 
     public SensorManager sensorManager;
     public Sensor sensor;
     boolean running;
+    boolean up;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        steps = 0;
         setContentView(R.layout.activity_main);
         tv_steps = (TextView) findViewById(R.id.tv_steps);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-
         if(sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null)
         {
-            sensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+            sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
             running = true;
-            System.out.println("DOOMIE");
+            System.out.println("DOOMIE" + sensorManager.getSensorList(Sensor.TYPE_STEP_COUNTER).indexOf(1));
         }
         else
         {
@@ -73,12 +74,16 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     @Override
     public void onSensorChanged(SensorEvent eve) {
-        System.out.println("AWFBAWAWJ");
-        tv_steps.setText("OWAIWGNGAW");
-        if(eve.sensor == sensor )
+        System.out.println(eve.values[1]);
+        if(eve.values[1] > 1.5 && up)
         {
-            steps = (int) eve.values[0];
+            up = false;
+            steps++;
             tv_steps.setText(String.valueOf(steps));
+        }
+        else if (eve.values[1] < -1.5 && !up)
+        {
+            up = true;
         }
 
     }
