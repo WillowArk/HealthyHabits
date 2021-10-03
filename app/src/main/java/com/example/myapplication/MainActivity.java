@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         super.onCreate(savedInstanceState);
         steps = 0;
         setContentView(R.layout.activity_main);
-        tv_steps = (TextView) findViewById(R.id.tv_steps);
+        //tv_steps = (TextView) findViewById(R.id.tv_steps);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         if(sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null)
         {
@@ -78,8 +78,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         if(eve.values[1] > 1.5 && up)
         {
             up = false;
-            steps++;
-            tv_steps.setText(String.valueOf(steps));
+            FitnessTab.steps++;
+            if(FitnessTab.tracked != null)
+                FitnessTab.tracked.setText(FitnessTab.steps + " Steps!");
+            //tv_steps.setText(String.valueOf(steps));
         }
         else if (eve.values[1] < -1.5 && !up)
         {
@@ -94,9 +96,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     public void goToFitness(View view) {
         Intent intent = new Intent(this, FitnessTab.class);
-        //EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
-        //String message = editText.getText().toString();
-        //intent.putExtra(EXTRA_MESSAGE, message);
+        String message = String.valueOf(steps);
+        intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 
