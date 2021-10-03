@@ -11,13 +11,14 @@
         <entry key="..\:/Users/willc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_sleep_tab.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_fitness_tab.xml" value="0.45" />
         <entry key="app/src/main/res/layout/activity_food_tab.xml" value="0.33061594202898553" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_options_tab.xml" value="0.24427083333333333" />
         <entry key="app/src/main/res/layout/activity_sleep_tab.xml" value="0.5978705978705978" />
         <entry key="app/src/main/res/xml/file_paths.xml" value="0.24427083333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
